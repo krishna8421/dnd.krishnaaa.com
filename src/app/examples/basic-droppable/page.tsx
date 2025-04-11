@@ -7,6 +7,7 @@ import {
   useDraggable,
   useDroppable,
   DragEndEvent,
+  UniqueIdentifier,
 } from "@dnd-kit/core";
 import {
   Card,
@@ -80,7 +81,7 @@ function DroppableArea({
 }
 
 export default function BasicDroppablePage() {
-  const [parent, setParent] = useState<string | null>(null);
+  const [parent, setParent] = useState<UniqueIdentifier | null>(null);
 
   function handleDragEnd(event: DragEndEvent) {
     const { over } = event;
@@ -118,11 +119,13 @@ export default function BasicDroppablePage() {
                 <div className="flex flex-col md:flex-row gap-8">
                   <DndContext onDragEnd={handleDragEnd}>
                     <div className="flex-1 h-64 bg-slate-50 rounded-lg flex items-center justify-center">
-                      {parent !== "droppable-area" && <DraggableItem />}
+                      {String(parent) !== "droppable-area" && <DraggableItem />}
                     </div>
                     <div className="flex-1 h-64">
                       <DroppableArea id="droppable-area">
-                        {parent === "droppable-area" && <DraggableItem />}
+                        {String(parent) === "droppable-area" && (
+                          <DraggableItem />
+                        )}
                       </DroppableArea>
                     </div>
                   </DndContext>
@@ -130,7 +133,7 @@ export default function BasicDroppablePage() {
                 <div className="mt-4 p-4 bg-muted rounded-lg">
                   <p className="font-mono text-sm">
                     Status:{" "}
-                    {parent === "droppable-area"
+                    {String(parent) === "droppable-area"
                       ? "Item dropped in target area! ✅"
                       : "Item outside target area"}
                   </p>
@@ -165,8 +168,8 @@ export default function BasicDroppablePage() {
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     The onDragEnd event provides information about which
-                    droppable area the item was dropped on via the 'over'
-                    property.
+                    droppable area the item was dropped on via the
+                    &apos;over&apos; property.
                   </p>
                 </div>
 

@@ -34,7 +34,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 // Initial kanban board data
-const initialTasks = {
+const initialTasks: Record<string, Task[]> = {
   "to-do": [
     { id: "task-1", content: "Research competitors", priority: "High" },
     { id: "task-2", content: "Update documentation", priority: "Medium" },

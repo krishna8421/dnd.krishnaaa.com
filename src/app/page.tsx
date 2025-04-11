@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
 export default function Home() {

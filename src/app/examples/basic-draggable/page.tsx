@@ -112,7 +112,7 @@ export default function BasicDraggablePage() {
               <CardHeader>
                 <CardTitle>How it works</CardTitle>
                 <CardDescription>
-                  Understanding the basics of dnd-kit's draggable functionality
+                  Understanding the basics of dnd-kit&apos;s draggable functionality
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">

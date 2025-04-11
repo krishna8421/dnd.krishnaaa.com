@@ -230,7 +230,7 @@ export default function MultipleContainersPage() {
                   <p className="text-sm text-muted-foreground">
                     Maintain state to track which items belong to which
                     container. This allows you to move items between containers
-                    when they're dropped.
+                    when they&apos;re dropped.
                   </p>
                 </div>
 

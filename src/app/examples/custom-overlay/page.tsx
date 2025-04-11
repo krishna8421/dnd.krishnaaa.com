@@ -71,7 +71,6 @@ function getFileIcon(type: string) {
 
 // Regular file item
 function FileItem({
-  id,
   name,
   type,
   size,
@@ -135,7 +134,6 @@ function SortableFileItem({
 
 // Custom overlay when dragging
 function DragOverlayContent({
-  id,
   name,
   type,
   size,
